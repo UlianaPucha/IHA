@@ -1,0 +1,245 @@
+[
+  {
+    "id": "urban-bees",
+    "title": "The Rise of Urban Beekeeping",
+    "topic": "Экология",
+    "paragraphs": [
+      "Over the past two decades, beekeeping has moved from the countryside to the rooftops of major cities. In London, Paris and New York, thousands of hives now sit on office buildings, hotels and apartment blocks. At first glance this trend seems surprising, since cities are usually associated with concrete, traffic and pollution rather than flowers. However, researchers have found that urban areas can offer bees a remarkably diverse supply of food.",
+      "The explanation lies in the variety of plants that grow in parks, private gardens, cemeteries and along railway lines. While modern farms often grow a single crop across vast fields, a city may contain hundreds of different species that flower at different times of the year. This continuous supply of nectar means that urban colonies sometimes produce more honey than rural ones. In addition, many cities have reduced their use of chemical pesticides, which are widely believed to contribute to the decline of insect populations.",
+      "Nevertheless, some scientists warn that the enthusiasm for city hives may have unintended consequences. Honeybees are only one of many pollinators, and in Britain alone there are more than two hundred species of wild bee. These wild species compete with honeybees for the same flowers. When the density of hives becomes too high, the available nectar may become scarce, and wild bees, which are often less able to travel long distances, can suffer as a result.",
+      "For this reason, experts increasingly advocate a more balanced approach. Rather than simply installing new hives, they recommend planting more flowering plants, leaving areas of grass uncut and creating nesting sites for solitary bees. Several local councils have already adopted such policies. Supporters argue that these measures benefit not only bees but also birds, butterflies and the residents who enjoy greener streets.",
+      "The story of urban beekeeping therefore illustrates a wider point about environmental action: well-intentioned initiatives must be based on evidence. A hive on every roof may look like a simple solution, but genuine biodiversity depends on the health of the whole ecosystem."
+    ],
+    "words": [
+      { "word": "remarkably", "translation": "удивительно, поразительно", "example": "urban areas can offer bees a remarkably diverse supply of food" },
+      { "word": "diverse", "translation": "разнообразный", "example": "a remarkably diverse supply of food" },
+      { "word": "continuous", "translation": "непрерывный, постоянный", "example": "This continuous supply of nectar means..." },
+      { "word": "decline", "translation": "спад, сокращение", "example": "contribute to the decline of insect populations" },
+      { "word": "unintended", "translation": "непреднамеренный, непредвиденный", "example": "may have unintended consequences" },
+      { "word": "density", "translation": "плотность", "example": "When the density of hives becomes too high..." },
+      { "word": "scarce", "translation": "дефицитный, скудный", "example": "the available nectar may become scarce" },
+      { "word": "advocate", "translation": "выступать за, отстаивать", "example": "experts increasingly advocate a more balanced approach" },
+      { "word": "adopted", "translation": "приняли (политику, решение)", "example": "Several local councils have already adopted such policies." },
+      { "word": "biodiversity", "translation": "биоразнообразие", "example": "genuine biodiversity depends on the health of the whole ecosystem" }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "text": "Why can cities provide bees with a good food supply?",
+        "options": [
+          "Cities are warmer than the countryside.",
+          "Cities contain many different plants that flower at different times.",
+          "City councils feed bees with sugar water.",
+          "Farms in the countryside have no flowers at all."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "q2",
+        "text": "According to the passage, urban colonies sometimes",
+        "options": [
+          "produce more honey than rural colonies.",
+          "are attacked by wild bees.",
+          "need to be moved to farms in winter.",
+          "are banned by local councils."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "q3",
+        "text": "What problem may occur when there are too many hives in one area?",
+        "options": [
+          "Honeybees become aggressive towards people.",
+          "Pesticide use increases.",
+          "Wild bees may not find enough nectar.",
+          "Honey becomes less sweet."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "q4",
+        "text": "Which measure do experts recommend?",
+        "options": [
+          "Installing a hive on every roof.",
+          "Cutting grass more often.",
+          "Removing solitary bees from cities.",
+          "Planting more flowering plants."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "q5",
+        "text": "What is the main point of the final paragraph?",
+        "options": [
+          "Urban beekeeping should be banned.",
+          "Environmental initiatives should be based on evidence.",
+          "Honeybees are more important than wild bees.",
+          "Cities are healthier than the countryside."
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "salt-history",
+    "title": "Salt: A Mineral That Shaped History",
+    "topic": "История",
+    "paragraphs": [
+      "Today salt is so cheap and widely available that it is easy to forget how valuable it once was. For thousands of years, however, salt was one of the most important commodities in the world. It was essential not only for flavouring food but, above all, for preserving it. Before the invention of refrigeration, meat and fish could be kept for months only if they were dried and salted.",
+      "Because of this, the control of salt supplies brought considerable wealth and power. Many ancient roads were built primarily to transport salt from coastal regions or inland mines to the cities that needed it. Towns grew up along these routes, and some modern European place names still reflect their connection with the salt trade. Governments quickly recognised that a product everyone required could be taxed, and salt taxes became a reliable source of revenue for rulers in China, Europe and India.",
+      "Such taxes were frequently unpopular. In France, the salt tax known as the gabelle was so deeply resented that it is often cited as one of the grievances that contributed to the Revolution of 1789. In India, the British colonial government held a monopoly on salt production, which meant that Indians were prohibited from collecting or selling their own salt. In 1930, Mahatma Gandhi led a famous march to the sea to make salt in open defiance of this law, an event that attracted worldwide attention.",
+      "The importance of salt began to diminish in the nineteenth and twentieth centuries. New methods of extraction made it far cheaper to produce, while canning and refrigeration reduced the need to preserve food with salt. As a result, a substance that had once been worth fighting over became an ordinary item on every kitchen table.",
+      "Paradoxically, modern health experts now worry that people consume too much salt rather than too little. The mineral that once sustained populations through long winters is today linked to high blood pressure, showing how the value of a resource can change dramatically over time."
+    ],
+    "words": [
+      { "word": "commodities", "translation": "товары, сырьё (для торговли)", "example": "salt was one of the most important commodities in the world" },
+      { "word": "preserving", "translation": "консервирование, сохранение", "example": "but, above all, for preserving it" },
+      { "word": "considerable", "translation": "значительный", "example": "brought considerable wealth and power" },
+      { "word": "primarily", "translation": "в первую очередь, главным образом", "example": "built primarily to transport salt" },
+      { "word": "revenue", "translation": "доход (особенно государственный)", "example": "a reliable source of revenue for rulers" },
+      { "word": "resented", "translation": "вызывал негодование", "example": "was so deeply resented that..." },
+      { "word": "monopoly", "translation": "монополия", "example": "held a monopoly on salt production" },
+      { "word": "prohibited", "translation": "запрещено", "example": "Indians were prohibited from collecting or selling their own salt" },
+      { "word": "diminish", "translation": "уменьшаться, ослабевать", "example": "The importance of salt began to diminish" },
+      { "word": "sustained", "translation": "поддерживал, обеспечивал", "example": "The mineral that once sustained populations..." }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "text": "What was the main reason salt was so valuable in the past?",
+        "options": [
+          "It was used as a medicine.",
+          "It was used to build roads.",
+          "It was very rare in nature.",
+          "It was needed to preserve food."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "q2",
+        "text": "Why did governments tax salt?",
+        "options": [
+          "To reduce salt consumption.",
+          "Because everyone needed it.",
+          "To protect coastal towns.",
+          "Because it was produced only in China."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "q3",
+        "text": "What does the passage say about the gabelle?",
+        "options": [
+          "It was one of the causes of public anger before 1789.",
+          "It was popular with ordinary people.",
+          "It was introduced after the French Revolution.",
+          "It applied only to salted fish."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "q4",
+        "text": "Gandhi's march to the sea in 1930 was a protest against",
+        "options": [
+          "high food prices in India.",
+          "the lack of refrigeration.",
+          "the British control of salt production.",
+          "pollution of the coastline."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "q5",
+        "text": "Why did salt become less important?",
+        "options": [
+          "Cheaper production and new ways of preserving food appeared.",
+          "Doctors advised people to stop eating it.",
+          "Salt mines were closed by governments.",
+          "People stopped eating meat and fish."
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "sleep-memory",
+    "title": "How Sleep Strengthens Memory",
+    "topic": "Наука",
+    "paragraphs": [
+      "For a long time, sleep was regarded as a passive state in which the brain simply rested. Over the last fifty years, however, neuroscientists have accumulated substantial evidence that sleep plays an active role in learning. In particular, it appears to be crucial for the process known as memory consolidation, during which new and fragile memories are transformed into more stable, long-term ones.",
+      "One influential series of experiments involved teaching volunteers a list of word pairs in the evening. Half of the participants were then allowed to sleep normally, while the other half were kept awake. When both groups were tested the following day, those who had slept recalled significantly more pairs. Similar results have been obtained for physical skills, such as playing a sequence of notes on a keyboard, suggesting that the benefit is not limited to facts.",
+      "Researchers believe that different stages of sleep contribute in different ways. During deep, slow-wave sleep, the brain seems to replay patterns of activity that occurred while the person was learning. This replay is thought to strengthen the connections between neurons. Rapid eye movement (REM) sleep, the stage associated with vivid dreams, may help the brain to integrate new information with existing knowledge and to detect hidden patterns.",
+      "These findings have practical implications, especially for students. Staying up all night before an examination may seem an efficient way to gain extra study time, yet it can undermine the very memories the student is trying to form. Some studies also indicate that a short nap after learning can provide a measurable improvement in recall, although the effect is smaller than that of a full night's sleep.",
+      "Despite this progress, many questions remain unanswered. Scientists still do not fully understand why some memories are selected for consolidation while others are discarded. Nevertheless, the evidence is now strong enough for many educators to recommend that sleep be treated as an essential part of learning rather than as time lost from it."
+    ],
+    "words": [
+      { "word": "passive", "translation": "пассивный", "example": "sleep was regarded as a passive state" },
+      { "word": "accumulated", "translation": "накопили", "example": "neuroscientists have accumulated substantial evidence" },
+      { "word": "substantial", "translation": "существенный, значительный", "example": "accumulated substantial evidence" },
+      { "word": "crucial", "translation": "решающий, крайне важный", "example": "it appears to be crucial for the process" },
+      { "word": "fragile", "translation": "хрупкий, непрочный", "example": "new and fragile memories" },
+      { "word": "recalled", "translation": "вспомнили", "example": "those who had slept recalled significantly more pairs" },
+      { "word": "integrate", "translation": "объединять, встраивать", "example": "help the brain to integrate new information" },
+      { "word": "implications", "translation": "последствия, практическое значение", "example": "These findings have practical implications" },
+      { "word": "undermine", "translation": "подрывать, ослаблять", "example": "it can undermine the very memories..." },
+      { "word": "discarded", "translation": "отброшены", "example": "while others are discarded" }
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "text": "What is memory consolidation?",
+        "options": [
+          "Forgetting information during sleep.",
+          "Learning new words in the evening.",
+          "Turning new memories into stable long-term ones.",
+          "Dreaming about past events."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "q2",
+        "text": "In the word-pair experiment, participants who slept",
+        "options": [
+          "were unable to complete the test.",
+          "remembered fewer word pairs.",
+          "performed the same as those who stayed awake.",
+          "remembered more word pairs."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "q3",
+        "text": "What happens during slow-wave sleep, according to researchers?",
+        "options": [
+          "The brain creates vivid dreams.",
+          "The brain replays activity from learning.",
+          "The brain switches off completely.",
+          "The brain deletes all new information."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "q4",
+        "text": "What does the passage say about staying up all night before an exam?",
+        "options": [
+          "It may damage the memories a student is trying to form.",
+          "It improves physical skills.",
+          "It has no effect on memory.",
+          "It is the most efficient way to study."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "q5",
+        "text": "Which statement about naps is supported by the passage?",
+        "options": [
+          "Naps are more effective than a full night's sleep.",
+          "Naps prevent memory consolidation.",
+          "A short nap can improve recall, but less than a full night's sleep.",
+          "Scientists have proved that naps have no effect."
+        ],
+        "answer": 2
+      }
+    ]
+  }
+]

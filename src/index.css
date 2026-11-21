@@ -1,0 +1,325 @@
+/* Стили по DESIGN.md. Компоненты — Mantine (тема в src/theme.js),
+   здесь — токены, раскладка экранов и собственные элементы. */
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --ink: #151515;
+  --ink-hover: #2a2a2a;
+  --on-ink: #ffffff;
+  --canvas: #f7f4ef;
+  --panel: #efe8de;
+  --panel-hover: #e7dfd3;
+  --surface: #ffffff;
+  --surface-hover: #f3eee7;
+  --on-surface: #151515;
+  --on-surface-muted: #5a554f;
+  --outline: #e3dbcf;
+  --disabled: #e7e1d8;
+  --on-disabled: #9c958b;
+  --topic-mint: #cdefdf;
+  --topic-peach: #f9ddb8;
+  --topic-lavender: #dcd5f8;
+  --topic-pink: #f6c6c9;
+  --success: #15803d;
+  --success-soft: #dcf2e4;
+  --success-text: #14532d;
+  --error: #c62828;
+  --error-soft: #fbe3e3;
+  --error-text: #a61b1b;
+  --warning: #9a5a06;
+  --warning-soft: #fcebd2;
+  --highlight: #ffe9a8;
+  /* не --popover-shadow: это имя занято Mantine и перезаписывается пропом shadow */
+  --word-popover-shadow: 0 12px 32px rgba(21, 21, 21, 0.12);
+  --bottom-bar-height: 68px;
+  --font-reading: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+body { background: var(--canvas); color: var(--on-surface); }
+
+/* Шапка: во всю ширину окна на фоне canvas, снизу линия outline — как у нижней панели.
+   Содержимое выровнено по ширине контента (1160 px, отступы 32 px). */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px max(32px, calc((100% - 1160px) / 2 + 32px));
+  background: var(--canvas);
+  border-bottom: 1px solid var(--outline);
+}
+.brand { font-weight: 700; font-size: 16px; }
+.topbar nav { display: flex; gap: 4px; }
+
+main { max-width: 1160px; margin: 0 auto; padding: 32px 32px 48px; }
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+
+/* Карточки (card из DESIGN.md): белые на фоне canvas, без рамки */
+.mantine-Card-root { background: var(--surface); }
+.empty { text-align: center; }
+
+/* Все кнопки 44 px, плоские (без кромки и теней) и при нажатии не смещаются */
+.mantine-Button-root:active,
+.mantine-ActionIcon-root:active,
+.mantine-CloseButton-root:active {
+  transform: none;
+}
+
+/* Список текстов: пастельные карточки по теме, одна под другой */
+.passage-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.passage-card.mantine-Card-root {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+  padding: 24px;
+  border-radius: 24px;
+  background: var(--topic-pink);
+}
+.passage-card.topic-mint { background: var(--topic-mint); }
+.passage-card.topic-peach { background: var(--topic-peach); }
+.passage-card.topic-lavender { background: var(--topic-lavender); }
+.passage-card .chip { background: var(--surface); color: var(--on-surface); margin-bottom: 8px; }
+.passage-card .mantine-Button-root { margin-top: 16px; }
+
+/* Экран чтения: две колонки, на узком экране — одна. Без подложки. */
+.reading { display: grid; grid-template-columns: 3fr 2fr; gap: 48px; align-items: start; }
+.questions { position: sticky; top: 16px; }
+@media (max-width: 800px) {
+  .reading { grid-template-columns: 1fr; gap: 32px; }
+  .questions { position: static; }
+}
+.passage-hint { margin: 8px 0 24px; }
+.passage-body p { margin: 0 0 1em; font-family: var(--font-reading); font-size: 17px; line-height: 1.7; }
+
+.word { cursor: pointer; border-radius: 8px; transition: background 0.12s; }
+.word:hover { background: var(--panel); }
+.word.highlight { background: var(--highlight); }
+.word.saved { background: var(--success-soft); }
+
+.questions-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 16px; }
+.questions-title { font-size: 17px; font-weight: 600; }
+.question { margin-bottom: 24px; }
+.question-title { display: flex; gap: 8px; align-items: flex-start; font-size: 17px; font-weight: 600; line-height: 1.4; margin-bottom: 12px; }
+.question-title .mantine-ThemeIcon-root { flex: none; margin-top: 1px; }
+.tiles { display: grid; gap: 8px; }
+
+/* Плитки ответов A–D (Radio.Card) */
+.option-tile {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 20px;
+  background: var(--panel);
+  color: var(--on-surface);
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: left;
+  transition: background 0.12s, color 0.12s, box-shadow 0.12s;
+}
+.option-tile:hover:not(:disabled) { background: var(--panel-hover); }
+/* Выбранная: белая с синей обводкой 2 px внутри — высота плитки не меняется */
+.option-tile.is-selected,
+.option-tile.is-selected:hover:not(:disabled) {
+  background: var(--surface);
+  box-shadow: inset 0 0 0 2px var(--primary);
+}
+.option-tile:disabled { cursor: default; opacity: 1; }
+.option-tile.is-correct { background: var(--success-soft); color: var(--on-surface); }
+.option-tile.is-incorrect { background: var(--error-soft); color: var(--error-text); text-decoration: line-through; }
+.option-tile.is-dimmed { color: var(--on-disabled); }
+.tile-letter { font-weight: 600; min-width: 1.2em; }
+.wrong-hint { margin: 8px 0 0 4px; color: var(--error); font-size: 13px; font-weight: 600; }
+
+/* Нижняя панель (bottom-bar): закреплена у нижнего края окна, линия outline сверху, без тени.
+   Высота 68 px = кнопка 44 px + 12 px сверху и снизу. */
+.bottom-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: var(--canvas);
+  border-top: 1px solid var(--outline);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.bottom-bar-inner {
+  box-sizing: border-box;
+  max-width: 1160px;
+  height: var(--bottom-bar-height);
+  margin: 0 auto;
+  padding: 12px 32px;
+}
+.bottom-bar-slot { display: flex; align-items: center; justify-content: flex-end; gap: 12px; }
+.bottom-bar-slot > .mantine-Text-root { margin-right: auto; }
+.bottom-bar-slot .mantine-Button-root { flex: none; }
+.bottom-bar-slot.split-always .mantine-Button-root { flex: 1; }
+.bottom-bar-spacer { height: var(--bottom-bar-height); }
+/* Чтение: та же сетка, что у .reading, содержимое — во второй колонке (вопросы) */
+.bottom-bar--reading .bottom-bar-inner { display: grid; grid-template-columns: 3fr 2fr; gap: 48px; }
+.bottom-bar--reading .bottom-bar-slot { grid-column: 2; }
+/* Карточки: по ширине флеш-карточки */
+.bottom-bar--cards .bottom-bar-slot { max-width: 480px; margin: 0 auto; }
+@media (max-width: 800px) {
+  .bottom-bar--reading .bottom-bar-inner { grid-template-columns: 1fr; gap: 0; }
+  .bottom-bar--reading .bottom-bar-slot { grid-column: 1; }
+  .bottom-bar-slot.split-narrow .mantine-Button-root { flex: 1; }
+}
+
+/* Попап слова */
+.word-popover.mantine-Popover-dropdown {
+  border: none;
+  padding: 16px;
+  background: var(--surface);
+  box-shadow: var(--word-popover-shadow);
+  overflow-wrap: anywhere;
+}
+.word-popover .mantine-TextInput-input { background: var(--canvas); }
+.popup-head { display: flex; justify-content: space-between; align-items: center; margin: -8px -8px 0 0; }
+.popup-head strong { font-size: 17px; }
+.example { font-style: italic; }
+
+/* Словарь */
+.word-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.word-item.mantine-Card-root { display: flex; flex-direction: row; align-items: center; gap: 12px; padding: 14px 8px 14px 20px; }
+.word-text { display: grid; gap: 2px; flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.word-text strong { font-size: 17px; font-weight: 600; }
+.word-item .mantine-Badge-root,
+.word-item .icon-delete { flex: none; }
+.icon-delete { color: var(--on-surface-muted); }
+.icon-delete:hover { color: var(--error); background: var(--error-soft); }
+
+/* Карточки: анимированный переворот. 240 px — минимальная высота: длинный перевод
+   растягивает карточку вниз. Стороны лежат в одной ячейке сетки, поэтому всегда
+   одной высоты — по большей из них. */
+.flashcard {
+  max-width: 480px;
+  margin: 0 auto 24px;
+  perspective: 1200px;
+  cursor: pointer;
+}
+.flashcard-inner {
+  display: grid;
+  min-height: 240px;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+.flashcard-inner.flipped { transform: rotateY(180deg); }
+.face {
+  grid-area: 1 / 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 24px;
+  text-align: center;
+  background: var(--surface);
+  border-radius: 24px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.face.back { transform: rotateY(180deg); }
+.flash-word { font-size: 28px; font-weight: 600; letter-spacing: -0.01em; }
+.flash-word.long { font-size: 20px; line-height: 1.3; letter-spacing: 0; }
+.cards-head { max-width: 480px; margin-left: auto; margin-right: auto; }
+@media (prefers-reduced-motion: reduce) {
+  .flashcard-inner { transition: none; }
+}
+
+/* Итог сессии */
+.summary.mantine-Card-root {
+  max-width: 420px;
+  margin: 16px auto 0;
+  border-radius: 24px;
+  padding: 32px 24px;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+.summary .mantine-Title-root { margin-top: 12px; }
+.score-display { margin-top: 16px; font-size: 44px; font-weight: 500; line-height: 1; letter-spacing: -0.02em; }
+.summary .progress { width: 100%; margin-top: 16px; }
+.legend { display: flex; gap: 16px; margin: 12px 0 24px; font-size: 13px; color: var(--on-surface-muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Экран входа (план 08): заголовок и карточка auth-card до 420 px по центру страницы
+   по горизонтали (решение пользователя 2026-11-16) */
+.auth-screen { max-width: 420px; margin: 0 auto; }
+.auth-screen .toolbar { justify-content: center; }
+.auth-card.mantine-Card-root {
+  max-width: 420px;
+  padding: 24px;
+  border-radius: 24px;
+}
+.auth-card .mantine-Input-input { background: var(--canvas); border: none; height: 44px; min-height: 44px; }
+.auth-card .mantine-PasswordInput-innerInput { height: 44px; }
+.auth-card .mantine-InputWrapper-label { font-size: 15px; font-weight: 400; margin-bottom: 6px; }
+.auth-card .mantine-InputWrapper-description { font-size: 13px; color: var(--on-surface-muted); margin-top: 6px; }
+.auth-card .mantine-InputWrapper-error { font-size: 13px; color: var(--error); margin-top: 6px; }
+.auth-card .mantine-Input-input[data-error] { color: var(--on-surface); box-shadow: inset 0 0 0 2px var(--error); }
+.auth-card .mantine-PasswordInput-visibilityToggle {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  color: var(--on-surface-muted);
+}
+
+/* Переключатель «Вход | Регистрация»: бежевая дорожка, выбранный сегмент — белая «таблетка» 44 px */
+.auth-switch.mantine-SegmentedControl-root { background: var(--panel); padding: 4px; }
+.auth-switch .mantine-SegmentedControl-indicator { background: var(--surface); box-shadow: none; }
+.auth-switch .mantine-SegmentedControl-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--on-surface-muted);
+}
+.auth-switch .mantine-SegmentedControl-label[data-active] { color: var(--on-surface); }
+
+.form-error,
+.form-warning {
+  margin-top: 16px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+.form-error { background: var(--error-soft); color: var(--error-text); }
+.form-warning { background: var(--warning-soft); color: var(--warning); }
+
+/* Окно переноса: белое, без тени, от страницы отделено затемнением */
+.transfer-modal .mantine-Modal-content,
+.transfer-modal .mantine-Modal-header { background: var(--surface); }
+.transfer-modal .mantine-Modal-content { box-shadow: none; }
+.transfer-title.mantine-Modal-title { font-size: 24px; font-weight: 500; line-height: 1.25; }
+
+/* Телефон */
+@media (max-width: 560px) {
+  .topbar { padding: 12px 16px; }
+  /* После входа надпись «IELTS Reading» скрыта, чтобы поместились три пункта меню */
+  .topbar.has-nav .brand { display: none; }
+  .topbar.has-nav nav { margin-left: auto; }
+  main { padding: 24px 16px 40px; }
+  .bottom-bar-inner { padding: 12px 16px; }
+  /* headline-display-mobile */
+  main h1.mantine-Title-root { font-size: 34px; line-height: 1.15; }
+}
